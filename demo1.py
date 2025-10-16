@@ -23,14 +23,9 @@ while True:
 
         student[name] = average 
 
-
     elif answer == "no":
-        print(f'{name}')
-        for name, gpa in student.items():
-            print(name, ":", round(gpa, 2))
-        print("\nProgram ended.")
-        break
-    
+        print('')
+        
     else:
          print('invalid input')
 
