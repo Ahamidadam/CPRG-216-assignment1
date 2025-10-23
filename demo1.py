@@ -1,4 +1,4 @@
-print('welcome to grading program ')
+print('Welcome to Grade Registry Program ')
 
 student = {} # a dictionary made to store students name and avr GPA
 
