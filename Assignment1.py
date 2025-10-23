@@ -24,10 +24,9 @@ while True:
         student[name] = average 
 
     elif answer == "no":
-        print('')
-        
+        print("This is the list of students in the system, and their corresponding accumulative GPA:")
+        for name, average in student.items():
+             print(f"{name} {average:.2f}" )
+        break
     else:
          print('invalid input')
-
-
-
