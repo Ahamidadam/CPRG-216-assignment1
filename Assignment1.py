@@ -29,4 +29,4 @@ while True:
              print(f"{name} {average:.2f}" )
         break
     else:
-         print('invalid input')
+         print('Incorrect Input, please enter y(yes)/n(no).')
