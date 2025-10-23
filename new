@@ -4,7 +4,7 @@ student = {} # a dictionary made to store students name and avr GPA
 
 while True:
     answer = input('Do you want to add a student(yes/no)\n')
-    if answer == "yes":
+    if answer == "yes" or answer == "yEs" or answer == "YEs":
         name = input("Enter the student's name:\n")
         gpas = [] #Created an empty list to store gpa's
 
@@ -24,7 +24,7 @@ while True:
         student[name] = average 
 
     elif answer == "no":
-        print("This is the list of students in the system, and their corresponding accumulative GPA:")
+        print("This is the list of students in the system, and their corresponding accumulative GPA")
         for name, average in student.items():
              print(f"{name} {average:.2f}" )
         break
