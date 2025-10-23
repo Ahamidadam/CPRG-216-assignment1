@@ -3,8 +3,8 @@ print('Welcome to Grade Registry Program ')
 student = {} # a dictionary made to store students name and avr GPA
 
 while True:
-    answer = input('Do you want to add a student(yes/no)\n')
-    if answer == "yes" or answer == "yEs" or answer == "YEs":
+    answer = input('Would you like to add a new student? y(yes),n(no)\n')
+    if answer == "yes" or answer == "yEs" or answer == "YEs" or answer == "Yes":
         name = input("Enter the student's name:\n")
         gpas = [] #Created an empty list to store gpa's
 
@@ -29,4 +29,4 @@ while True:
              print(f"{name} {average:.2f}" )
         break
     else:
-         print('invalid input')
+         print('Incorrect Input, please enter y(yes)/n(no).')
