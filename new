@@ -32,4 +32,4 @@ while True:
         break
 
     else:
-        print('Incorrect Input, please enter y(yes),n(no).')
+        print('Incorrect Input, please enter y(yes)/n(no).')
