@@ -1,12 +1,12 @@
-print('Welcome to Grade Registry Program ')
+print('Welcome to the Grade Registry Program')
 
-student = {} # a dictionary made to store students name and avr GPA
+student = {}  # a dictionary made to store student names and average GPAs
 
 while True:
     answer = input('Would you like to add a new student? y(yes),n(no)\n')
     if answer == "yes" or answer == "yEs" or answer == "YEs" or answer == "Yes":
         name = input("Enter the student's name:\n")
-        gpas = [] #Created an empty list to store gpa's
+        gpas = []  # empty list to store GPA values
 
         print('Enter student GPA for each subject. Enter -1 to stop entering GPA.')
         while True:
@@ -14,19 +14,22 @@ while True:
             if gpa_input == '-1':
                 break
             gpa = float(gpa_input)
-            gpas.append(gpa)#adding gpa's to the current list of gpas 
+            gpas.append(gpa)
 
-        if gpas: 
-                average = sum(gpas) / len(gpas) #the sum/the number of gpa
+        if gpas:
+            average = sum(gpas) / len(gpas)
         else:
-                average = 0.0
+            average = 0.0
 
-        student[name] = average 
+        student[name] = average
 
     elif answer == "no" or answer == "n":
         print("This is the list of students in the system, and their corresponding accumulative GPA")
         for name, average in student.items():
-             print(f"{name} {average:.2f}" )
+            # remove unnecessary trailing zeros to match the assignment exactly
+            formatted_avg = ('%.2f' % average).rstrip('0').rstrip('.') # Removes 0. Removes . when output is 0
+            print(f"{name} {formatted_avg}")
         break
+
     else:
-         print('Incorrect Input, please enter y(yes)/n(no).')
+        print('Incorrect Input, please enter y(yes),n(no).')
